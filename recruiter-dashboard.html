@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recruiter Dashboard - InternMatch</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">InternMatch</a>
+        <nav>
+          <ul>
+            <li><a href="recruiter-dashboard.html">Dashboard</a></li>
+            <li><a href="post-opportunity.html">Post Opportunity</a></li>
+            <li><a href="#manage-postings">Manage Postings</a></li>
+            <li><a href="#search-students">Search Students</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container dashboard-container">
+      <h1>Welcome, <span id="recruiterCompanyName">Company!</span></h1>
+
+      <section class="dashboard-section">
+        <h2>Your Active Postings</h2>
+        <div id="activePostings" class="internship-grid">
+          <!-- Active job postings will be loaded here by JS -->
+          <div class="internship-card placeholder">
+            <h3>No Active Postings</h3>
+            <p>
+              Click "Post New Opportunity" to start finding candidates.
+            </p>
+          </div>
+        </div>
+        <div class="view-all-link">
+          <a href="#manage-postings" class="btn btn-secondary"
+            >Manage All Postings</a
+          >
+        </div>
+      </section>
+
+      <section class="dashboard-section">
+        <h2>Candidates Applications Overview</h2>
+        <div id="applicationOverview" class="overview-cards">
+          <div class="overview-card">
+            <h3>Total Applications</h3>
+            <p class="metric">150</p>
+            <p class="description">Across all your opportunities</p>
+          </div>
+          <div class="overview-card">
+            <h3>New Applications Today</h3>
+            <p class="metric">5</p>
+            <p class="description">Keep an eye on new talent</p>
+          </div>
+          <div class="overview-card">
+            <h3>Candidates Contacted</h3>
+            <p class="metric">25</p>
+            <p class="description">Engaged with candidates</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-section quick-links">
+        <h2>Quick Actions</h2>
+        <ul>
+          <li>
+            <a href="post-opportunity.html"
+              >&#x270D; Post New Internship/Placement</a
+            >
+          </li>
+          <li>
+            <a href="#search-students"
+              >&#x1F50D; Search Student Profiles</a
+            >
+          </li>
+          <li>
+            <a href="#company-profile"
+              >&#x1F3E2; Manage Company Profile</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              >&#x1F4AD; Messages (Coming Soon)</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 InternMatch. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/recruiter-script.js"></script>
+  </body>
+</html>

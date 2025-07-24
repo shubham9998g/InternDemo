@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post New Opportunity - InternMatch</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">InternMatch</a>
+        <nav>
+          <ul>
+            <li><a href="recruiter-dashboard.html">Dashboard</a></li>
+            <li><a href="post-opportunity.html">Post Opportunity</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container form-container">
+      <h1>Post a New Internship/Placement</h1>
+
+      <form id="postOpportunityForm">
+        <section class="form-section">
+          <h2>Opportunity Details</h2>
+          <div class="form-group">
+            <label for="opportunityTitle">Role Title:</label>
+            <input
+              type="text"
+              id="opportunityTitle"
+              name="title"
+              placeholder="e.g., Software Engineering Intern, Data Analyst"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="opportunityType">Type:</label>
+            <select id="opportunityType" name="type" required>
+              <option value="">Select Type</option>
+              <option value="Internship">Internship</option>
+              <option value="Full-time Placement">Full-time Placement</option>
+              <option value="Part-time">Part-time</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="opportunityDomain">Domain:</label>
+            <input
+              type="text"
+              id="opportunityDomain"
+              name="domain"
+              placeholder="e.g., Software Development, Marketing, Finance"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="opportunityLocation">Location:</label>
+            <input
+              type="text"
+              id="opportunityLocation"
+              name="location"
+              placeholder="e.g., Remote, San Francisco, CA"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="opportunityStipend">Stipend/Salary (per month, leave blank if unpaid):</label>
+            <input
+              type="number"
+              id="opportunityStipend"
+              name="stipend"
+              min="0"
+              placeholder="e.g., 1500"
+            />
+          </div>
+          <div class="form-group">
+            <label for="opportunityDuration">Duration (in months, if applicable):</label>
+            <input
+              type="number"
+              id="opportunityDuration"
+              name="duration"
+              min="1"
+              placeholder="e.g., 6"
+            />
+          </div>
+          <div class="form-group">
+            <label for="opportunityDescription">Job Description:</label>
+            <textarea
+              id="opportunityDescription"
+              name="description"
+              rows="8"
+              placeholder="Provide a detailed description of the role, responsibilities, and benefits."
+              required
+            ></textarea>
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>Required Skills</h2>
+          <div class="form-group">
+            <label for="requiredSkills">Technical Skills (comma-separated):</label>
+            <input
+              type="text"
+              id="requiredSkills"
+              name="technicalSkills"
+              placeholder="e.g., JavaScript, React, SQL, Python"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="preferredSkills">Preferred Skills (comma-separated, optional):</label>
+            <input
+              type="text"
+              id="preferredSkills"
+              name="preferredSkills"
+              placeholder="e.g., AWS, Docker, Agile Methodologies"
+            />
+          </div>
+        </section>
+
+        <section class="form-section">
+          <h2>Application Details</h2>
+          <div class="form-group">
+            <label for="applicationDeadline">Application Deadline:</label>
+            <input
+              type="date"
+              id="applicationDeadline"
+              name="deadline"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Contact Email for Applicants:</label>
+            <input
+              type="email"
+              id="contactEmail"
+              name="contactEmail"
+              placeholder="e.g., careers@yourcompany.com"
+              required
+            />
+          </div>
+        </section>
+
+        <button type="submit" class="btn btn-primary">Post Opportunity</button>
+        <button type="reset" class="btn btn-secondary">Clear Form</button>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 InternMatch. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/recruiter-script.js"></script>
+  </body>
+</html>

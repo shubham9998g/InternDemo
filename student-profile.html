@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Profile - InternMatch</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">InternMatch</a>
+        <nav>
+          <ul>
+            <li><a href="student-dashboard.html">Dashboard</a></li>
+            <li><a href="student-profile.html">Profile</a></li>
+            <li><a href="internship-listings.html">All Internships</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container profile-container">
+      <h1>Your Profile</h1>
+
+      <section class="profile-section">
+        <h2>Personal Information</h2>
+        <form id="personalInfoForm">
+          <div class="form-group">
+            <label for="studentName">Full Name:</label>
+            <input
+              type="text"
+              id="studentName"
+              name="name"
+              value="John Doe"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="studentEmail">Email:</label>
+            <input
+              type="email"
+              id="studentEmail"
+              name="email"
+              value="john.doe@example.com"
+              disabled
+            />
+          </div>
+          <div class="form-group">
+            <label for="studentPhone">Phone:</label>
+            <input
+              type="tel"
+              id="studentPhone"
+              name="phone"
+              value="+1234567890"
+            />
+          </div>
+          <div class="form-group">
+            <label for="studentLocation">Location:</label>
+            <input
+              type="text"
+              id="studentLocation"
+              name="location"
+              value="New York, USA"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+      </section>
+
+      <section class="profile-section">
+        <h2>Education</h2>
+        <form id="educationForm">
+          <div class="form-group">
+            <label for="university">University:</label>
+            <input
+              type="text"
+              id="university"
+              name="university"
+              value="State University"
+            />
+          </div>
+          <div class="form-group">
+            <label for="degree">Degree:</label>
+            <input
+              type="text"
+              id="degree"
+              name="degree"
+              value="B.S. Computer Science"
+            />
+          </div>
+          <div class="form-group">
+            <label for="graduationYear">Graduation Year:</label>
+            <input
+              type="number"
+              id="graduationYear"
+              name="graduationYear"
+              value="2026"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+      </section>
+
+      <section class="profile-section">
+        <h2>Skills</h2>
+        <form id="skillsForm">
+          <div class="form-group">
+            <label for="technicalSkills">Technical Skills (comma-separated):</label>
+            <input
+              type="text"
+              id="technicalSkills"
+              name="technicalSkills"
+              value="JavaScript, React, Node.js, Python, SQL"
+            />
+          </div>
+          <div class="form-group">
+            <label for="softSkills">Soft Skills (comma-separated):</label>
+            <input
+              type="text"
+              id="softSkills"
+              name="softSkills"
+              value="Communication, Teamwork, Problem-solving, Adaptability"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+      </section>
+
+      <section class="profile-section">
+        <h2>Links</h2>
+        <form id="linksForm">
+          <div class="form-group">
+            <label for="githubLink">GitHub Profile URL:</label>
+            <input
+              type="url"
+              id="githubLink"
+              name="githubLink"
+              value="https://github.com/johndoe"
+            />
+          </div>
+          <div class="form-group">
+            <label for="linkedinLink">LinkedIn Profile URL:</label>
+            <input
+              type="url"
+              id="linkedinLink"
+              name="linkedinLink"
+              value="https://www.linkedin.com/in/johndoe"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+      </section>
+
+      <section class="profile-section">
+        <h2>Resume</h2>
+        <div class="form-group">
+          <label for="resumeUpload">Upload New Resume (PDF):</label>
+          <input type="file" id="resumeUpload" name="resume" accept=".pdf" />
+          <button type="button" class="btn btn-secondary">Upload Resume</button>
+        </div>
+        <p>
+          Current Resume:
+          <a href="#" id="currentResumeLink" target="_blank"
+            >john_doe_resume.pdf</a
+          >
+          (Last updated: 2025-07-20)
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 InternMatch. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/student-script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internship Listings - InternMatch</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">InternMatch</a>
+        <nav>
+          <ul>
+            <li><a href="student-dashboard.html">Dashboard</a></li>
+            <li><a href="student-profile.html">Profile</a></li>
+            <li><a href="internship-listings.html">All Internships</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container listings-container">
+      <h1>Browse Internships</h1>
+
+      <div class="filters-sidebar">
+        <h2>Filters</h2>
+        <div class="filter-group">
+          <label for="domainFilter">Domain:</label>
+          <select id="domainFilter">
+            <option value="">All Domains</option>
+            <option value="Software Development">Software Development</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Marketing">Marketing</option>
+            <option value="Finance">Finance</option>
+            <option value="Design">Design</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="locationFilter">Location:</label>
+          <input type="text" id="locationFilter" placeholder="e.g., Remote, New York" />
+        </div>
+        <div class="filter-group">
+          <label for="typeFilter">Type:</label>
+          <select id="typeFilter">
+            <option value="">All Types</option>
+            <option value="Internship">Internship</option>
+            <option value="Placement">Full-time Placement</option>
+            <option value="Part-time">Part-time</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label for="stipendFilter">Min. Stipend ($):</label>
+          <input type="number" id="stipendFilter" min="0" placeholder="e.g., 500" />
+        </div>
+        <div class="filter-group">
+          <label for="skillsFilter">Skills (comma-separated):</label>
+          <input type="text" id="skillsFilter" placeholder="e.g., Python, SQL" />
+        </div>
+        <button class="btn btn-primary" id="applyFiltersBtn">Apply Filters</button>
+        <button class="btn btn-secondary" id="clearFiltersBtn">Clear Filters</button>
+      </div>
+
+      <div class="internship-listings">
+        <h2>All Available Internships</h2>
+        <div id="internshipList" class="internship-grid">
+          <!-- Internship listings will be loaded here by JS -->
+          <div class="internship-card">
+            <h3>Software Development Intern</h3>
+            <p class="company-name">Tech Innovators Inc.</p>
+            <p class="location">Location: Remote</p>
+            <p class="stipend">Stipend: $1000/month</p>
+            <p class="skills">Skills: Python, Django, AWS</p>
+            <button class="btn btn-primary apply-btn" data-id="1">Apply Now</button>
+            <button class="btn btn-secondary bookmark-btn" data-id="1">Bookmark</button>
+          </div>
+
+          <div class="internship-card">
+            <h3>Data Science Fellow</h3>
+            <p class="company-name">Analyze Corp.</p>
+            <p class="location">Location: San Francisco, CA</p>
+            <p class="stipend">Stipend: $1200/month</p>
+            <p class="skills">Skills: R, SQL, Machine Learning</p>
+            <button class="btn btn-primary apply-btn" data-id="2">Apply Now</button>
+            <button class="btn btn-secondary bookmark-btn" data-id="2">Bookmark</button>
+          </div>
+
+          <div class="internship-card">
+            <h3>Marketing Intern</h3>
+            <p class="company-name">Brand Boosters</p>
+            <p class="location">Location: Hybrid, New York, NY</p>
+            <p class="stipend">Stipend: $800/month</p>
+            <p class="skills">Skills: Social Media, Content Creation, SEO</p>
+            <button class="btn btn-primary apply-btn" data-id="3">Apply Now</button>
+            <button class="btn btn-secondary bookmark-btn" data-id="3">Bookmark</button>
+          </div>
+          <!-- More internship cards would be dynamically added here -->
+        </div>
+        <div id="noInternshipsFound" class="message-card" style="display: none;">
+          <p>No internships found matching your criteria.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 InternMatch. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/student-script.js"></script>
+  </body>
+</html>

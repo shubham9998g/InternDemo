@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard - InternMatch</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container">
+        <a href="index.html" class="logo">InternMatch</a>
+        <nav>
+          <ul>
+            <li><a href="student-dashboard.html">Dashboard</a></li>
+            <li><a href="student-profile.html">Profile</a></li>
+            <li><a href="internship-listings.html">All Internships</a></li>
+            <li><a href="#applied-internships">Applied</a></li>
+            <li><a href="#" id="logoutBtn">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container dashboard-container">
+      <h1>Welcome, <span id="studentNameDisplay">Student!</span></h1>
+
+      <section class="dashboard-section">
+        <h2>Recommended Internships</h2>
+        <div id="recommendedInternships" class="internship-grid">
+          <!-- Recommended internships will be loaded here by JS -->
+          <div class="internship-card placeholder">
+            <h3>Loading Recommendations...</h3>
+            <p>Please update your profile for better matches.</p>
+          </div>
+        </div>
+        <div class="view-all-link">
+          <a href="internship-listings.html" class="btn btn-secondary"
+            >View All Internships</a
+          >
+        </div>
+      </section>
+
+      <section class="dashboard-section">
+        <h2>Your Applications</h2>
+        <div id="appliedInternships" class="internship-grid">
+          <!-- Applied internships will be loaded here by JS -->
+          <div class="internship-card placeholder">
+            <h3>No Applications Yet</h3>
+            <p>Start applying to internships to see them here.</p>
+          </div>
+        </div>
+        <div class="view-all-link">
+          <a href="#applied-internships" class="btn btn-secondary"
+            >Manage Applications</a
+          >
+        </div>
+      </section>
+
+      <section class="dashboard-section quick-links">
+        <h2>Quick Actions</h2>
+        <ul>
+          <li>
+            <a href="student-profile.html"
+              >&#x270E; Edit Your Profile</a
+            >
+          </li>
+          <li>
+            <a href="student-profile.html"
+              >&#x219Up; Upload/Update Resume</a
+            >
+          </li>
+          <li>
+            <a href="internship-listings.html"
+              >&#x1F50D; Browse New Internships</a
+            >
+          </li>
+          <li>
+            <a href="#"
+              >&#x1F4AD; Messages (Coming Soon)</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 InternMatch. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/student-script.js"></script>
+  </body>
+</html>
